@@ -1,0 +1,51 @@
+ 1. Use let and const (Recommended) ?
+let → used for variables that may change
+const → used for constants (values that don’t change)
+var → old way (avoid using in modern JS)
+____________________________________________________
+
+ 2. Valid Variable Names !
+✅ Valid:
+let userName;
+let _temp;
+let $price;
+_________________________________________________
+
+❌ Invalid:
+let 1user;      // Cannot start with a number
+let var;        // Cannot use reserved keywords
+_________________________________________________
+
+🔹 3. Variable Names Are Case-Sensitive
+let user = "Ayan";
+let User = "Mondal";
+console.log(user); // "Ayan"
+console.log(User); // "Mondal" // Out will be different
+_________________________________________________________
+
+4. No Spaces in Names
+Use camelCase for multi-word names:
+let userAge;      // ✅
+let user age;     // ❌ Invalid
+______________________________________________________
+
+ 5. Must Be Declared Before Use
+console.log(score); // ❌ ReferenceError
+let score = 10;
+______________________________________________________
+
+6. Don’t Redeclare with let or const
+let a = 5;
+let a = 10; // ❌ Error: Identifier 'a' has already been declared
+✅ Allowed in different scopes
+let a = 5;
+{
+  let a = 10;  // ✅ Allowed: different block
+  console.log(a); // 10
+}
+console.log(a); // 5
+___________________________________
+
+7. Initialize const Immediately
+const pi = 3.14;   // ✅
+const price;       // ❌ Error: Must be initialized
