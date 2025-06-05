@@ -49,3 +49,4 @@ ___________________________________
 7. Initialize const Immediately
 const pi = 3.14;   // ✅
 const price;       // ❌ Error: Must be initialized
+
